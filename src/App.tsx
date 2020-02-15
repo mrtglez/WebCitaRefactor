@@ -1,11 +1,10 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
   return (
-    <div class="contenedor_gris">
-      <div class="contenedor_blanco">
+    <div className="contenedor_gris">
+      <div className="contenedor_blanco">
         <a href="https://institucional.us.es/cprevias/index.php" title="inicio">
           <img
             src="./Cita Previa __ Gesti�n de Citas On-Line de la Universidad de Sevilla_files/cabecera-left.gif"
@@ -20,12 +19,12 @@ function App() {
         </a>
         <div id="menu">
           <ul>
-            <li class="menu_principal">
+            <li className="menu_principal">
               <a href="https://institucional.us.es/cprevias/citaPrevia.php">
                 Pedir Cita
               </a>
             </li>
-            <li class="menu_principal">
+            <li className="menu_principal">
               <a href="https://institucional.us.es/cprevias/misCitas.php">
                 Mis Citas
               </a>
@@ -33,8 +32,9 @@ function App() {
           </ul>
         </div>
       </div>
-      <div class="contenedor_blanco">
-        <p style="text-align:right;margin-bottom:-23px;">
+      <div className="contenedor_blanco">
+        <p>
+          {/* ///style="text-align:right;margin-bottom:-23px;" */}
           <a
             href="https://institucional.us.es/cprevias/salir.php"
             title="Cerrar la sesi�n"
@@ -51,300 +51,171 @@ function App() {
           id="frmCitaPrevia"
           action="https://institucional.us.es/cprevias/citaPrevia.php"
           method="POST"
-          onsubmit="return validaFormCalendario();"
         >
-          <fieldset id="fieldsetCitaPrevia" class="fieldsetCitaPrevia">
+          <fieldset id="fieldsetCitaPrevia" className="fieldsetCitaPrevia">
             <h1>1. Centro</h1>
-            <label
-              class="labelCitaPrevia2"
-              style="margin-left:20px;width:400px;text-align:left;font-weight:bold;"
-            >
+            <label className="labelCitaPrevia2">
               Escuela T�cnica Superior de Ingenier�a Inform�tica
             </label>
             <br /> <input type="hidden" name="paso" value="3" />
             <h1>2. Selecciona un Servicio</h1>
-            <div id="contenedora" style="width:100%">
-              <div class="capaTipoServicio" style="text-transform: uppercase;">
+            <div id="contenedora">
+              <div className="capaTipoServicio">
                 <br />
                 <b>Otras solicitudes</b>
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="116"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="116" />
                 Presentaci�n de otras solicitudes
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="119"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="119" />
                 Presentaci�n de solicitud de devoluci�n
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="115"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="115" />
                 Presentaci�n solicitud cambio Departamento Proyecto
               </div>
             </div>
-            <div id="contenedora" style="width:100%">
-              <div class="capaTipoServicio" style="text-transform: uppercase;">
+            <div id="contenedora">
+              <div className="capaTipoServicio">
                 <br />
                 <b>Ampliaci�n de matr�cula</b>
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="112"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="112" />
                 Presentaci�n de solicitud de ampliaci�n de matr�cula
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="113"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="113" />
                 Recogida carta de pago ampliaci�n matr�cula
               </div>
             </div>
-            <div id="contenedora" style="width:100%">
-              <div class="capaTipoServicio" style="text-transform: uppercase;">
+            <div id="contenedora">
+              <div className="capaTipoServicio">
                 <br />
                 <b>Pr�cticas en Empresas</b>
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="100"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="100" />
                 Presentaci�n de solicitud de pr�cticas
               </div>
             </div>
-            <div id="contenedora" style="width:100%">
-              <div class="capaTipoServicio" style="text-transform: uppercase;">
+            <div id="contenedora">
+              <div className="capaTipoServicio">
                 <br />
                 <b>Informaci�n </b>
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="90"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="90" />
                 Informaci�n general
               </div>
             </div>
-            <div id="contenedora" style="width:100%">
-              <div class="capaTipoServicio" style="text-transform: uppercase;">
+            <div id="contenedora">
+              <div className="capaTipoServicio">
                 <br />
                 <b>Reconocimientos de cr�ditos</b>
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="92"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="92" />
                 Entrega de documentaci�n de reconocimiento de cr�ditos
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="96"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="96" />
                 Informaci�n sobre reconocimientos y adaptaciones
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="91"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="91" />
                 Presentaci�n de solicitud de reconocimiento de cr�ditos
               </div>
             </div>
-            <div id="contenedora" style="width:100%">
-              <div class="capaTipoServicio" style="text-transform: uppercase;">
+            <div id="contenedora">
+              <div className="capaTipoServicio">
                 <br />
                 <b>Compulsas</b>
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="97"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="97" />
                 Compulsa de documentos
               </div>
             </div>
-            <div id="contenedora" style="width:100%">
-              <div class="capaTipoServicio" style="text-transform: uppercase;">
+            <div id="contenedora">
+              <div className="capaTipoServicio">
                 <br />
                 <b>Traslados de expediente</b>
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="99"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="99" />
                 Entrega de traslado de expediente
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="98"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="98" />
                 Presentaci�n de solicitud de traslado de expediente
               </div>
             </div>
-            <div id="contenedora" style="width:100%">
-              <div class="capaTipoServicio" style="text-transform: uppercase;">
+            <div id="contenedora">
+              <div className="capaTipoServicio">
                 <br />
                 <b>T�tulos</b>
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="118"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="118" />
                 Presentaci�n de solicitud de t�tulo
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="103"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="103" />
                 Recogida del resguardo de T�tulo
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="26"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="26" />
                 Recogida del t�tulo
               </div>
             </div>
-            <div id="contenedora" style="width:100%">
-              <div class="capaTipoServicio" style="text-transform: uppercase;">
+            <div id="contenedora">
+              <div className="capaTipoServicio">
                 <br />
                 <b>Matriculaci�n</b>
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="138"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="138" />
                 Compulsa y revisi�n de matr�culas
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="95"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="95" />
                 Informaci�n sobre matr�cula
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="108"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="108" />
                 Presentaci�n de solicitud de anulaci�n de matr�cula
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="110"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="110" />
                 Presentaci�n de solicitud de cambio de grupo ingl�s
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="109"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="109" />
                 Presentaci�n de solicitud de modificaci�n de matr�cula
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="111"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="111" />
                 Presentaci�n de solicitud de permuta
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="107"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="107" />
                 Presentaci�n solicitud matr�cula Pr�cticas en Empresas
               </div>
             </div>
-            <div id="contenedora" style="width:100%">
-              <div class="capaTipoServicio" style="text-transform: uppercase;">
+            <div id="contenedora">
+              <div className="capaTipoServicio">
                 <br />
                 <b>Certificaciones</b>
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="7"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="7" />
                 Recogida de Certificaciones Acad�micas
               </div>
-              <div class="capaServicio">
-                <input
-                  type="radio"
-                  name="cs"
-                  value="94"
-                  onclick="seleccionaServicio();"
-                />
+              <div className="capaServicio">
+                <input type="radio" name="cs" value="94" />
                 Solicitud de certificaciones acad�micas
               </div>
             </div>
@@ -357,7 +228,7 @@ function App() {
             <br />
             &nbsp;
             <br />
-            <div class="capaBotones">
+            <div className="capaBotones">
               <p>
                 <br />
                 <br />
@@ -366,7 +237,7 @@ function App() {
               </p>{" "}
               <input
                 type="submit"
-                class="boton"
+                className="boton"
                 value="Siguiente paso"
                 name="siguiente"
               />
@@ -379,16 +250,15 @@ function App() {
         <br />
       </div>
       <div id="contenedor_pie">
-        <p style="margin-top: 0px;">
+        <p>
           <b>
             Universidad de Sevilla. C/ S. Fernando, 4, C.P. 41004-Sevilla,
             Espa�a. Centralita exterior: 954551000 citapreviafefp@us.es
           </b>
-          <span class="contacto">
+          <span className="contacto">
             <a
               href="mailto:citapreviafefp@us.es"
               title="Enviar un email al Administrador de Cita Previa"
-              style="text-decoration:none;color:#FFFFFF;margin-right:20px;margin-top:0px;"
             >
               Contacto
             </a>
