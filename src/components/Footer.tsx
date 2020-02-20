@@ -21,10 +21,7 @@ function WebFooter() {
         </p>
       </div>
       <p id="creditos">
-        Desarrollado por{' '}
-        <a target="_blank" href="http://www.aljamir.es/">
-          Aljamir S.L.
-        </a>
+        Desarrollado por <a href="http://www.aljamir.es/">Aljamir S.L.</a>
       </p>
     </div>
   );

@@ -37,7 +37,6 @@ const WebHeader = (props: any) => {
           &nbsp;
         </p>{' '}
         <h1>MARTIN GONZALEZ LOPEZ </h1>
-        <h4></h4>
         <h2>Solicitud de Cita Previa </h2>
       </div>
     </div>
