@@ -29,14 +29,14 @@ body {
 input {
 }
 
-input[type="submit"],
-input[type="button"] {
+input[type='submit'],
+input[type='button'] {
   height: 30px;
   cursor: pointer;
 }
 
-input[type="submit"]:hover,
-input[type="button"]:hover {
+input[type='submit']:hover,
+input[type='button']:hover {
   background: #333 !important;
   color: #fff;
 }
@@ -1223,12 +1223,12 @@ tr th {
 }
 
 #capaBotonesNavegacion #boton-left:before {
-  content: "\2039";
+  content: '\2039';
   margin-right: 5px;
 }
 
 #capaBotonesNavegacion #boton-right:after {
-  content: "\203A";
+  content: '\203A';
   margin-left: 5px;
 }
 
