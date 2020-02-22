@@ -1,6 +1,6 @@
 import { of, Observable } from 'rxjs';
-import { Centro } from '../interfaces';
-import { CENTROS } from '../mockupData';
+import { Centro, Categoria, Servicio } from '../interfaces';
+import { CENTROS, CATEGORIAS, SERVICIOS } from '../mockupData';
 
 class UniversityService {
   private static instance: UniversityService;
@@ -21,6 +21,14 @@ class UniversityService {
 
   public getCentros(): Observable<Centro[]> {
     return of(CENTROS);
+  }
+
+  public getCategorias(): Observable<Categoria[]> {
+    return of(CATEGORIAS);
+  }
+
+  public getServicios(categoria: string): Observable<Servicio[]> {
+    return of(SERVICIOS.filter(x => x.categoriaId === categoria));
   }
 }
 
